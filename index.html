@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT-2 Demo</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        textarea { width: 100%; height: 100px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        #output { white-space: pre-wrap; background: #f4f4f4; padding: 15px; }
+    </style>
+</head>
+<body>
+    <h1>GPT-2 Text Generator</h1>
+    <form id="promptForm">
+        <textarea id="prompt" placeholder="Type your prompt here..."></textarea>
+        <button type="submit">Generate Text</button>
+    </form>
+    <h2>Output:</h2>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("promptForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const prompt = document.getElementById("prompt").value;
+            const response = await fetch("/generate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt }),
+            });
+            const data = await response.json();
+            document.getElementById("output").textContent = data.output;
+        });
+    </script>
+</body>
