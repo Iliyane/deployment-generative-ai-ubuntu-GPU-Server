@@ -18,19 +18,29 @@ GPT-2 Text Generation Model on Ubuntu server using FastAPI
 ## 📦 Installation
 
 1. Update system packages.
-apt update   
+    sudo apt update   
 3. Install python3 and pip
-4. Create and activate the virtual environment
-5. Create the required directories
-6. Install PyTorch with GPU support
-7. Install Transformers and Tensorflow
-8. Install FastAPI and Uvicorn
-9. Create simple interface and index.html file
-10. Write the following code
-11. Write the app.py file which loads GPT-2 model and handles requests
-12. Run the FastAPI on your local server by opening a browser
-13. Enter a prompt
-14. Generate text
+   sudo apt install -y python3 python3-pip python3-venv
+5. Create and activate the virtual environment
+   python3 -m venv generative-ai-env
+   source generative-ai-env/bin/activate   
+7. Create the required directories
+   mkdir templates static
+9. Install PyTorch with GPU support
+    pip install torch torchvision torchaudio --index-url https://download.pythorch.org/whl/cu118
+11. Install Transformers and Tensorflow
+    pip install tensorflow transformers diffusers openai
+13. Install FastAPI and Uvicorn
+    pip install fastapi uvicorn jinja
+15. Create simple interface and index.html file
+    nano templates/index.html
+17. Add the code from index file
+18. Write the app.py file which loads GPT-2 model and handles requests
+    nano app.py
+20. Run the FastAPI on your local server by opening a browser
+    uvicorn app:app --reload --host 0.0.0.0 -port 8000
+22. Enter a prompt
+23. Generate text
 
 To install and run this project locally, follow these steps:
 
