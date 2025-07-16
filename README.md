@@ -17,7 +17,8 @@ GPT-2 Text Generation Model on Ubuntu server using FastAPI
 
 ## 📦 Installation
 
-1. Update system packages.   
+1. Update system packages.
+apt update   
 3. Install python3 and pip
 4. Create and activate the virtual environment
 5. Create the required directories
