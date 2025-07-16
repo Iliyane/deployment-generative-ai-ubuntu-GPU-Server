@@ -17,60 +17,30 @@ GPT-2 Text Generation Model on Ubuntu server using FastAPI
 
 ## 📦 Installation
 
-1. Update system packages.
+#  Update system packages.
     sudo apt update   
-3. Install python3 and pip
+#  Install python3 and pip
    sudo apt install -y python3 python3-pip python3-venv
-5. Create and activate the virtual environment
+# Create and activate the virtual environment
    python3 -m venv generative-ai-env
    source generative-ai-env/bin/activate   
-7. Create the required directories
+# Create the required directories
    mkdir templates static
-9. Install PyTorch with GPU support
+# Install PyTorch with GPU support
     pip install torch torchvision torchaudio --index-url https://download.pythorch.org/whl/cu118
-11. Install Transformers and Tensorflow
+# Install Transformers and Tensorflow
     pip install tensorflow transformers diffusers openai
-13. Install FastAPI and Uvicorn
+# Install FastAPI and Uvicorn
     pip install fastapi uvicorn jinja
-15. Create simple interface and index.html file
+# Create simple interface and index.html file
     nano templates/index.html
-17. Add the code from index file
-18. Write the app.py file which loads GPT-2 model and handles requests
+# Add the code from index file
+# Write the app.py file which loads GPT-2 model and handles requests
     nano app.py
-20. Run the FastAPI on your local server by opening a browser
+# Run the FastAPI on your local server by opening a browser
     uvicorn app:app --reload --host 0.0.0.0 -port 8000
-22. Enter a prompt
-23. Generate text
+# Enter a prompt and Generate text
 
-To install and run this project locally, follow these steps:
-
-```bash
-# Clone the repository
-git clone https://github.com/Iliyane/deployment-generative-ai-ubuntu-GPU-Server.git
-
-# Navigate into the directory
-cd project-name
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
-🛠️ Built With
-    • Python
-    • FastAPI
-    • TensorFlow, Pythorch
-    • Transformers, Uvicorn
-📁 Project Structure
-project-name/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── App.js
-├── .gitignore
-├── package.json
-└── README.md
 ✅ Usage
 Describe how to use the app here. Add screenshots or GIFs if relevant.
 🧪 Tests
